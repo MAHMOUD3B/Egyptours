@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The description of the website in search result page -->
+    <meta name="description" content="Egyptours is the first tourist trip booking site in Egypt, providing you with the best options for booking tourist trips and hotels at competitive prices and distinguished service.
+Discover new destinations and enjoy an enjoyable trip.">
+    <!-- The most keywords are used in search -->
+    <meta name="keywords" content="Tourism - tours - journy - travel">
+    <title>Egyptours</title>
+    <!-- Bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <!-- Font awesome file & render elements normally & the main file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+
+  <body class="text-capitalize">
+    <div class="background position-fixed top-0 w-100"></div>
+    <!-- The header of page -->
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light text-light">
+          <a class="navbar-brand" href="#">
+            <img class="logo-img" src="./images/logo.png" alt="Egyptours">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="nav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link rounded active" href="#"><i
+                    class="fa fa-home me-2"></i>
+                  home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link rounded" href="#"><i
+                    class="fa fa-suitcase me-2"></i>
+                  tours</a></li>
+              <li class="nav-item"><a class="nav-link rounded" href="#"><i
+                    class="fa fa-plane me-2"></i>flights</a></li>
+              <li class="nav-item"><a class="nav-link rounded" href="#"><i
+                    class="fa fa-hotel me-2"></i>hotels</a></li>
+              <li class="nav-item"><a class="nav-link rounded" href="#"><i
+                    class="fa fa-ship me-2"></i>cruises</a></li>
+            </ul>
+            <div class="options d-flex">
+              <div class="dropdown me-2">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-user"></i> my
+                  accounts</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">login</a></li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">signin</a>
+                  </li>
+                </ul>
+              </div>
+              <select class="form-select w-auto me-2 bg-transparent shadow-none border-0"
+                name="Currency">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="SAR">SAR</option>
+                <option value="EUR">EUR</option>
+              </select>
+              <div class="dropdown">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-language"></i> lang</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">Arabic</a>
+                  </li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">english</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- landing section -->
+    <section class="landing container d-flex justify-content-center align-items-center">
+      <h1 class="w-50 text-center fw-bold text-white lh-base">Travel and explore the world
+        Book in EGP with no limits</h1>
+    </section>
+    <!-- Services section -->
+    <section class="services text-center text-sm-start">
+
+      <!-- services options -->
+      <ul class="services-nav nav justify-content-center">
+        <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="tours"><i
+            class="fa fa-suitcase me-2"></i>
+          tours</li>
+        <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="flights"><i
+            class="fa fa-plane me-2"></i>
+          flights</li>
+        <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="hotels"><i
+            class="fa fa-hotel me-2"></i>
+          hotels</li>
+        <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="cruises"><i
+            class="fa fa-ship me-2"></i>
+          cruises</li>
+
+      </ul>
+
+      <!-- the content of each option -->
+      <div class="services-content">
+        <div class="tours d-none text-light" data-match="tours">
+          <form class="p-3">
+            <div class="row">
+              <div class="form-group col-sm-6 col-lg-4 position-relative">
+                <lablel class="form-label pb-3" for="place">where whould you like to go?</lablel>
+                <input class="form-control border border-warning ps-sm-5"
+                  placeholder="Destination, city, or rigion" type="text" id="place">
+                <i
+                  class="fa fa-location-dot position-absolute top-50 left-0 ms-3 fs-5 text-dark d-none d-sm-block"></i>
+              </div>
+              <div class="form-group col-sm-6 col-lg-4">
+                <lablel class="form-label pb-3" for="from">From</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+              </div>
+              <div class="form-group col-sm-6 col-lg-4">
+                <lablel class="form-label pb-3" for="to">To</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+              </div>
+              <button
+                class="col-sm-6 col-lg-2 btn btn-warning rounded fs-5 mt-3 ms-lg-3 mx-auto ms-lg-0"
+                type="button">Search Now</button>
+            </div>
+          </form>
+        </div>
+        <div class="flights d-none text-light" data-match="flights">
+          <form>
+            <div class="options fs-5 d-flex py-3">
+              <div class="form-check d-flex align-items-center">
+                <input class="form-check-inline position-relative" type="radio" name="flight"
+                  id="round" checked>
+                <label class="form-check-label ms-1" for="round">Round trip</label>
+              </div>
+              <div class="form-check d-flex align-items-center">
+                <input class="form-check-inline position-relative" type="radio" name="flight"
+                  id="one-way">
+                <label class="form-check-label ms-1" for="one-way">one way</label>
+              </div>
+              <div class="form-check d-flex align-items-center">
+                <input class="form-check-inline position-relative" type="radio" name="flight"
+                  id="city">
+                <label class="form-check-label ms-1" for="city">multi city</label>
+              </div>
+            </div>
+            <div class="reservation row g-3 py-3 container-fluid">
+              <div class="col-lg-6 field">
+                <label class="form-label" for="from">leaving from</label>
+                <input class="form-control shadow-none border-2 border-warning"
+                  placeholder="City Or Airport" type="search" id="from">
+              </div>
+              <div class="col-lg-6 field">
+                <label class="form-label" for="to">going to</label>
+                <input class="form-control shadow-none border-2 border-warning"
+                  placeholder="City Or Airport" type="search" id="to">
+              </div>
+              <div class="col-lg-3">
+                <label class="form-label" for="depart">departing</label>
+                <input class="form-control shadow-none border-2 border-warning"
+                  placeholder="Pick A Date" type="text" id="return" onfocus="this.type='date'"
+                  onblur="this.type='text'">
+              </div>
+              <div class="col-lg-3">
+                <label class="form-label" for="return">returning</label>
+                <input class="form-control shadow-none border-2 border-warning"
+                  placeholder="Pick A Date" type="text" id="return" onfocus="this.type='date'"
+                  onblur="this.type='text'">
+              </div>
+              <div class="passengers col-lg-2">
+                <div class="form-group">
+                  <label class="form-label" for="passengers">Passengers</label>
+                  <div class="dropdown" id="passengers">
+                    <button
+                      class="dropdown-toggle btn btn-light border-2 border-warning shadow-none"
+                      type="button" data-bs-toggle="dropdown">
+                      <span class="adult" data-text="Adult" data-text-multi="Adults">0
+                        Adult</span>
+                      -
+                      <span class="children" data-text="Child" data-text-multi="Children">0
+                        Child</span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Adults</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="adult_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class=" d-flex align-items-center justify-content-between">
+                          <label>Children</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="child_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Infants</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="infants_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coach col-lg-2 d-block">
+                <label class="form-label" for="coach">Coach</label>
+                <select class="form-select shadow-none border-2 border-warning" id="coach">
+                  <option value="">First class</option>
+                  <option value="">Bussiness</option>
+                  <option value="">Economy</option>
+                </select>
+              </div>
+              <div class="search col-lg-2">
+                <button class="btn btn-warning w-100 text-dark fs-5 fw-bold mt-4"
+                  type="button">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="hotels d-none text-light" data-match="hotels">
+          <form class="p-3">
+            <div class="row">
+              <div class="form-group col-sm-6 col-lg-3 position-relative">
+                <lablel class="form-label pb-3" for="place">Destination/Hotel Name</lablel>
+                <input class="form-control border border-warning ps-sm-5"
+                  placeholder="Enter City Or Property" type="text" id="place">
+                <i
+                  class="fa fa-location-dot position-absolute top-50 left-0 ms-3 fs-5 text-dark d-none d-sm-block"></i>
+              </div>
+              <div class="form-group col-sm-6 col-lg-3">
+                <lablel class="form-label pb-3" for="from">From</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+              </div>
+              <div class="form-group col-sm-6 col-lg-3">
+                <lablel class="form-label pb-3" for="to">To</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+              </div>
+              <div class="guests col-sm-6 col-lg-3">
+                <div class="form-group">
+                  <label class="form-label mb-0" for="passengers">Guests & Rooms</label>
+                  <div class="dropdown" id="passengers">
+                    <button
+                      class="dropdown-toggle btn btn btn-light border border-warning shadow-none"
+                      type="button" data-bs-toggle="dropdown">
+                      <span class="adult" data-text="Adult" data-text-multi="Adults">0
+                        Adult</span>
+                      -
+                      <span class="children" data-text="Child" data-text-multi="Children">0
+                        Child</span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Adults</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="adult_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class=" d-flex align-items-center justify-content-between">
+                          <label>Children</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="child_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Infants</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="infants_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="col-sm-6 col-lg-2 btn btn-warning rounded fs-5 mt-3 ms-lg-3 mx-auto ms-lg-0"
+                type="button">Search Now</button>
+            </div>
+          </form>
+        </div>
+        <div class="cruises d-none text-light" data-match="cruises">
+          <form class="p-3">
+            <div class="row">
+              <div class="form-group col-sm-6 col-lg-3">
+                <label for="country">Going to</label>
+                <select class="form-select" id="country">
+                  <option value="" checked>Select destination</option>
+                  <optgroup label="Most Popular">
+                    <option value="caribbean">Caribbean</option>
+                    <option value="bahamas">Bahamas</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="europe">Europe</option>
+                    <option value="bermuda">Bermuda</option>
+                    <option value="hawaii">Hawaii</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="italy">Italy</option>
+                    <option value="canada-new-england">
+                      Canada / New England
+                    </option>
+                  </optgroup>
+                  <optgroup label="Other Destinations">
+                    <option value="arctic-antarctic">
+                      Arctic / Antarctic
+                    </option>
+                    <option value="middle-east">
+                      Middle East
+                    </option>
+                    <option value="africa">Africa</option>
+                    <option value="panama-canal">
+                      Panama Canal
+                    </option>
+                    <option value="asia">Asia</option>
+                    <option value="pacific-coastal">
+                      Pacific Coastal
+                    </option>
+                    <option value="australia-new-zealand">
+                      Australia / New Zealand
+                    </option>
+                    <option value="central-america">
+                      Central America
+                    </option>
+                    <option value="galapagos">Galapagos</option>
+                    <option value="getaway-at-sea">
+                      Getaway at Sea
+                    </option>
+                    <option value="transatlantic">
+                      Transatlantic
+                    </option>
+                    <option value="world-cruise">World</option>
+                    <option value="south-america">
+                      South America
+                    </option>
+                    <option value="south-pacific">
+                      South Pacific
+                    </option>
+                    <option value="transpacific">
+                      Transpacific
+                    </option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group col-sm-6 col-lg-3">
+                <lablel class="form-label pb-3" for="from">Departs as early as</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+              </div>
+              <div class="form-group col-sm-6 col-lg-3">
+                <lablel class="form-label pb-3" for="to">Departs as late as</lablel>
+                <input class="form-control border border-warning" onfocus="type='date'"
+                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+              </div>
+              <div class="travelars col-sm-6 col-lg-3">
+                <div class="form-group">
+                  <label class="form-label mb-0" for="passengers">Travelars in the cabin</label>
+                  <div class="dropdown" id="passengers">
+                    <button
+                      class="dropdown-toggle btn btn btn-light border border-warning shadow-none"
+                      type="button" data-bs-toggle="dropdown">
+                      <span class="adult" data-text="Adult" data-text-multi="Adults">0
+                        Adult</span>
+                      -
+                      <span class="children" data-text="Child" data-text-multi="Children">0
+                        Child</span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Adults</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="adult_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class=" d-flex align-items-center justify-content-between">
+                          <label>Children</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="child_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <label>Infants</label>
+                          <div class="d-flex align-items-center">
+                            <div>
+                              <i class="fa fa-minus"></i>
+                            </div>
+                            <input class="number rounded-circle" type="text" name="infants_number"
+                              value="0" />
+                            <div>
+                              <i class="fa fa-plus"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="col-sm-6 col-lg-2 btn btn-warning rounded fs-5 mt-3 ms-lg-3 mx-auto ms-lg-0"
+                type="button">Search Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Features section -->
+    <section class="features py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="left col m-3 text-center p-3 rounded-2">
+            <i class="fa fa-thumbs-up badge rounded-circle bg-dark text-warning p-4 fs-3 mb-3"></i>
+            <h4 class="lh-base">You'll never roam alone</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor</p>
+          </div>
+          <div class="center col m-3 text-center p-3 rounded-3">
+            <i class="fa fa-earth badge rounded-circle bg-dark text-warning p-4 fs-3 mb-3"></i>
+            <h4 class="lh-base">A world of choice – anytime, anywhere</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor</p>
+          </div>
+          <div class="right col m-3 text-center p-3 rounded-2">
+            <i class="fa fa-bullhorn badge rounded-circle bg-dark text-warning p-4 fs-3 mb-3"></i>
+            <h4 class="lh-base">Peace of mind, wherever you wander</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Popular flights section -->
+    <section class="popular-flights py-5 bg-light">
+      <div class="container">
+        <h3 class="fs-1 fw-bold w-50 mx-auto mb-5 text-center">Most Popular Flights Destinations
+        </h3>
+        <div class="shuffle mx-auto text-center d-b">
+          <ul class="nav justify-content-center gap-3">
+            <li class="nav-item"><a
+                class="nav-link btn btn-outline-warning border-0 rounded-pill text-dark fs-5 active"
+                href="#">New
+                York</a></li>
+            <li class="nav-item"><a
+                class="nav-link btn btn-outline-warning border-0 rounded-pill text-dark fs-5"
+                href="#">Tokyo</a></li>
+            <li class="nav-item"><a
+                class="nav-link btn btn-outline-warning border-0 rounded-pill text-dark fs-5"
+                href="#">Paris</a></li>
+            <li class="nav-item"><a
+                class="nav-link btn btn-outline-warning border-0 rounded-pill text-dark fs-5"
+                href="#">Moscow</a></li>
+          </ul>
+        </div>
+        <div class="boxs my-5">
+          <div class="row ">
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="box col m-2 bg-white p-3 rounded">
+              <div class="head d-flex align-items-start mb-2">
+                <img src="./images/airline-img.png" alt="airline company">
+                <div class="text ms-3">
+                  <a href="#" class="link-dark text-decoration-none fs-5">New York <span><i
+                        class="fa fa-right-left"></i></span> London</a>
+                  <p class="text-muted">Tue, Jul 14-Fri, Jul 24</p>
+                </div>
+              </div>
+              <div class="foot d-flex align-items-center justify-content-between">
+                <p class="text-muted">From <span class="fw-bold text-dark">$300</span></p>
+                <a class="link-dark text-decoration-none" href="#">See details <i
+                    class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Javascript files -->
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+
+</html>

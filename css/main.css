@@ -1,0 +1,238 @@
+:root {
+  --main-color: rgba(255, 166, 0, 0.9);
+}
+
+input,
+textarea {
+  caret-color: var(--main-color);
+}
+
+body {
+  height: 10000px;
+}
+
+.background {
+  background-image: url("../images/landing1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 80vh;
+}
+
+/* Animations */
+
+/* Styling the header of page */
+header {
+  height: 80px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+
+  .logo-img {
+    width: 130px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background-color: rgba(255, 166, 0, 0.616);
+  }
+
+  .dropdown-toggle:hover,
+  select:hover {
+    color: orange !important;
+  }
+}
+
+/* Styling the landing of page */
+.landing {
+  height: calc(50vh - 80px);
+}
+
+/* Styling Services section */
+.services {
+  background-color: rgba(32, 49, 82, 0.8);
+
+  .services-nav {
+    background-color: rgba(32, 49, 82, .63);
+
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        width: 0;
+        background-color: var(--main-color);
+        transition: 0.3s;
+      }
+
+      &:hover,
+      &.active {
+        color: var(--main-color) !important;
+
+        &::before {
+          width: 80%;
+        }
+      }
+    }
+
+  }
+
+  .services-content {
+    .number {
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      border: none;
+      text-align: center;
+      background-color: transparent;
+    }
+
+    .flights {
+      .options {
+        input[type="radio"] {
+          appearance: none;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid var(--main-color);
+            left: -10px;
+            top: -10px;
+          }
+
+          &:checked::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--main-color);
+            top: -6px;
+            left: -6px;
+          }
+        }
+      }
+
+      .reservation {
+        .passengers {
+
+          .fa-plus,
+          .fa-minus {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.showed {
+  display: block !important;
+}
+
+/* Styling Features section */
+.features {
+  background-image: url("../images/color-bg3.png");
+  background-size: cover;
+  background-position: center;
+
+  .left,
+  .center,
+  .right {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 100;
+    min-width: 250px;
+  }
+
+  .left {
+    transition: .3s;
+    box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+    .fa-thumbs-up {
+      transition: .3s;
+    }
+
+    &:hover .fa-thumbs-up {
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      box-shadow: -10px 10px 30px 1px rgba(0, 0, 0, 0.6);
+      transform: translate(3px, -3px);
+    }
+  }
+
+  .center {
+    transition: .3s;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.6);
+      transform: translateY(-5px);
+    }
+
+    .fa-earth {
+      transition: 0.3s;
+    }
+
+    &:hover .fa-earth {
+      transform: scale(1.1);
+    }
+
+  }
+
+  .right {
+    transition: .3s;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+    .fa-bullhorn {
+      transition: .3s;
+    }
+
+    &:hover .fa-bullhorn {
+      transform: rotate(-25deg) scale(1.1);
+    }
+
+    &:hover {
+      box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.6);
+      transform: translate(-3px, -3px);
+    }
+  }
+}
+
+/* Styling Popular flights section */
+.popular-flights {
+  .shuffle {
+    .nav-link {
+      background-color: white;
+      &:hover,
+      &.active {
+        background-color: var(--main-color);
+      }
+    }
+  }
+  .boxs {
+    .box {
+      min-width: 250px;
+      box-shadow: 1px 1px 10px 0 rgba(83, 83, 83, 0.1);
+      transition: .3s;
+      &:hover {
+        box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
+      }
+      a {
+        transition: .3s;
+        &:hover {
+          color:var(--main-color);
+        }
+      }
+    }
+  }
+}
