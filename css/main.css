@@ -7,10 +7,6 @@ textarea {
   caret-color: var(--main-color);
 }
 
-body {
-  height: 10000px;
-}
-
 .background {
   background-image: url("../images/landing1.png");
   background-position: center;
@@ -20,7 +16,47 @@ body {
   height: 80vh;
 }
 
+body {
+  overflow-x: hidden;
+  height: 10000px;
+}
+
 /* Animations */
+@keyframes fad-in {
+  from {
+    opacity: 0.2;
+    transform: translateY(50px) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* Styling the header of page */
 header {
@@ -150,17 +186,21 @@ header {
     position: relative;
     z-index: 100;
     min-width: 250px;
+    min-height: 300px;
+    transition: .3s;
+    animation: fad-in linear;
+    animation-timeline: view(block 98% 10px);
   }
 
   .left {
     transition: .3s;
     box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.1);
 
-    .fa-thumbs-up {
+    .fa-bullhorn {
       transition: .3s;
     }
 
-    &:hover .fa-thumbs-up {
+    &:hover .fa-bullhorn {
       transform: scale(1.2);
     }
 
@@ -193,11 +233,11 @@ header {
     transition: .3s;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
 
-    .fa-bullhorn {
+    .fa-thumbs-up {
       transition: .3s;
     }
 
-    &:hover .fa-bullhorn {
+    &:hover .fa-thumbs-up {
       transform: rotate(-25deg) scale(1.1);
     }
 
@@ -213,26 +253,206 @@ header {
   .shuffle {
     .nav-link {
       background-color: white;
+
       &:hover,
       &.active {
         background-color: var(--main-color);
       }
     }
   }
+
   .boxs {
     .box {
       min-width: 250px;
       box-shadow: 1px 1px 10px 0 rgba(83, 83, 83, 0.1);
       transition: .3s;
+
       &:hover {
         box-shadow: 1px 1px 30px 0 rgba(0, 0, 0, 0.2);
       }
-      a {
-        transition: .3s;
-        &:hover {
-          color:var(--main-color);
-        }
+    }
+  }
+
+  a {
+    transition: .3s;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+}
+
+/* Styling Popular hotels section */
+.popular-hotels {
+  background-color: rgb(255, 245, 227);
+
+  a {
+    transition: .3s;
+
+    &:hover {
+      color: var(--main-color);
+    }
+  }
+
+  .carousel {
+    position: relative;
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--main-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    button.bg-warning {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -10px;
+
+      &:nth-child(1) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 30px;
       }
     }
+
+  }
+
+  .card {
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .sign {
+      top: -10px;
+      left: 10px;
+    }
+
+    .fa-heart {
+      cursor: pointer;
+      transition: .3s;
+      top: 10px;
+      right: 10px;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+/* Styling Top places section */
+.top-places {
+  .row {
+    transition: .3s;
+    animation: fad-in linear;
+    animation-timeline: view(block 95% 10px);
+  }
+
+  .card {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .badge {
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+
+    img {
+      transition: .3s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      bottom: -60px;
+      transition: .3s;
+      z-index: 2;
+      width: 100%;
+
+      .empty {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &:hover .card-body {
+      bottom: -10px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* Styling Testimonials section */
+.testimonials {
+  background-color: rgb(255, 245, 227);
+
+  .col-lg-8 {
+    transition: .3s;
+    animation: fromRight linear;
+    animation-timeline: view(block 95% 10px);
+  }
+
+  .rating {
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .empty {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .carousel {
+    position: relative;
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--main-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    button.bg-warning {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -10px;
+
+      &:nth-child(1) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 30px;
+      }
+    }
+
   }
 }
