@@ -13,7 +13,7 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  height: 80vh;
+  height: 100%;
 }
 
 body {
@@ -76,6 +76,11 @@ header {
 
   .logo-img {
     width: 130px;
+  }
+  @media (max-width: 767px) {
+    .navbar-nav {
+      background-color: white;
+    }
   }
 
   .nav-link:hover,

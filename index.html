@@ -33,12 +33,12 @@ Discover new destinations and enjoy an enjoyable trip.">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-between" id="nav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav p-3 gap-2">
               <li class="nav-item"><a class="nav-link rounded active" href="#"><i
                     class="fa fa-home me-2"></i>
                   home</a>
               </li>
-              <li class="nav-item"><a class="nav-link rounded" href="#"><i
+              <li class="nav-item"><a class="nav-link rounded " href="#"><i
                     class="fa fa-suitcase me-2"></i>
                   tours</a></li>
               <li class="nav-item"><a class="nav-link rounded" href="#"><i
@@ -105,8 +105,8 @@ Discover new destinations and enjoy an enjoyable trip.">
 
       <!-- services options -->
       <ul class="services-nav nav justify-content-center">
-        <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="tours"><i
-            class="fa fa-suitcase me-2"></i>
+        <li class="nav-item rounded fs-5 text-light pb-3 position-relative active"
+          data-target="tours"><i class="fa fa-suitcase me-2"></i>
           tours</li>
         <li class="nav-item rounded fs-5 text-light pb-3 position-relative" data-target="flights"><i
             class="fa fa-plane me-2"></i>
@@ -122,7 +122,7 @@ Discover new destinations and enjoy an enjoyable trip.">
 
       <!-- the content of each option -->
       <div class="services-content">
-        <div class="tours d-none text-light" data-match="tours">
+        <div class="tours d-none showed text-light mx-5" data-match="tours">
           <form class="p-3">
             <div class="row">
               <div class="form-group col-sm-6 col-lg-4 position-relative">
@@ -134,13 +134,15 @@ Discover new destinations and enjoy an enjoyable trip.">
               </div>
               <div class="form-group col-sm-6 col-lg-4">
                 <lablel class="form-label pb-3" for="from">From</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="form-group col-sm-6 col-lg-4">
                 <lablel class="form-label pb-3" for="to">To</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+                <input class="form-control border border-warning"
+                  onfocus="type='date', min='2024-03-27'" onblur="type='text'" type="text"
+                  placeholder="Pick a date" id="to">
               </div>
               <button
                 class="col-sm-6 col-lg-2 btn btn-warning rounded fs-5 mt-3 ms-lg-3 mx-auto ms-lg-0"
@@ -148,7 +150,7 @@ Discover new destinations and enjoy an enjoyable trip.">
             </div>
           </form>
         </div>
-        <div class="flights d-none text-light" data-match="flights">
+        <div class="flights d-none text-light mx-5" data-match="flights">
           <form>
             <div class="options fs-5 d-flex py-3">
               <div class="form-check d-flex align-items-center">
@@ -180,15 +182,15 @@ Discover new destinations and enjoy an enjoyable trip.">
               </div>
               <div class="col-lg-3">
                 <label class="form-label" for="depart">departing</label>
-                <input class="form-control shadow-none border-2 border-warning"
-                  placeholder="Pick A Date" type="text" id="return" onfocus="this.type='date'"
-                  onblur="this.type='text'">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="col-lg-3">
                 <label class="form-label" for="return">returning</label>
-                <input class="form-control shadow-none border-2 border-warning"
-                  placeholder="Pick A Date" type="text" id="return" onfocus="this.type='date'"
-                  onblur="this.type='text'">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="passengers col-lg-2">
                 <div class="form-group">
@@ -268,7 +270,7 @@ Discover new destinations and enjoy an enjoyable trip.">
             </div>
           </form>
         </div>
-        <div class="hotels d-none text-light" data-match="hotels">
+        <div class="hotels d-none text-light mx-5" data-match="hotels">
           <form class="p-3">
             <div class="row">
               <div class="form-group col-sm-6 col-lg-3 position-relative">
@@ -280,13 +282,15 @@ Discover new destinations and enjoy an enjoyable trip.">
               </div>
               <div class="form-group col-sm-6 col-lg-3">
                 <lablel class="form-label pb-3" for="from">From</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="form-group col-sm-6 col-lg-3">
                 <lablel class="form-label pb-3" for="to">To</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="guests col-sm-6 col-lg-3">
                 <div class="form-group">
@@ -357,7 +361,7 @@ Discover new destinations and enjoy an enjoyable trip.">
             </div>
           </form>
         </div>
-        <div class="cruises d-none text-light" data-match="cruises">
+        <div class="cruises d-none text-light mx-5" data-match="cruises">
           <form class="p-3">
             <div class="row">
               <div class="form-group col-sm-6 col-lg-3">
@@ -421,13 +425,15 @@ Discover new destinations and enjoy an enjoyable trip.">
               </div>
               <div class="form-group col-sm-6 col-lg-3">
                 <lablel class="form-label pb-3" for="from">Departs as early as</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="from">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="form-group col-sm-6 col-lg-3">
                 <lablel class="form-label pb-3" for="to">Departs as late as</lablel>
-                <input class="form-control border border-warning" onfocus="type='date'"
-                  onblur="type='text'" type="text" placeholder="Pick a date" id="to">
+                <input class="form-control border border-warning" type="text"
+                  onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                  placeholder="Pick a date">
               </div>
               <div class="travelars col-sm-6 col-lg-3">
                 <div class="form-group">
@@ -1381,7 +1387,7 @@ Discover new destinations and enjoy an enjoyable trip.">
     <!-- =========================== -->
 
     <!-- Start Footer section -->
-    <footer class="py-4 position-relative">
+    <footer class="py-4 position-relative text-center text-md-start">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
@@ -1447,7 +1453,8 @@ Discover new destinations and enjoy an enjoyable trip.">
           </div>
         </div>
         <div class="row mb-4">
-          <div class="content d-flex align-items-center justify-content-between">
+          <div
+            class="content d-flex align-items-center justify-content-between flex-column flex-md-row">
             <ul class="links d-flex gap-4">
               <li class="list-unstyled"><a class="link-dark text-decoration-none" href="#">terms &
                   conditions</a></li>
@@ -1464,7 +1471,8 @@ Discover new destinations and enjoy an enjoyable trip.">
           </div>
         </div>
         <div class="row">
-          <div class="info d-flex align-items-center justify-content-between fs-6 text-muted">
+          <div
+            class="info d-flex align-items-center justify-content-between fs-6 text-muted flex-column-reverse flex-md-row">
             <p>&copy; Copyright Egyptours 2024. Made By <span
                 class="fw-bold text-warning">Brmja.Tech</span> Team</p>
             <div class="payment">
