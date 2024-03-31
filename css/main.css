@@ -69,24 +69,61 @@ body {
   }
 }
 
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling loading spinner */
+.overlay {
+  z-index: 1000;
+  transition: .5s;
+  opacity: 0;
+
+  .loading {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-left: 6px dashed rgb(0, 140, 255);
+    border-bottom: 6px dashed rgb(0, 140, 255);
+    border-right: 6px dashed rgb(0, 140, 255);
+    border-top: 6px dashed rgb(0, 140, 255);
+    border-radius: 50%;
+    animation: loading 2s linear infinite;
+  }
+}
+
 /* Styling the header of page */
 header {
   height: 80px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
-
+  position: relative;
+  z-index: 10;
   .logo-img {
     width: 130px;
   }
 
   @media (max-width: 991px) {
-    .navbar-nav {
+    .navbar-collapse {
       background-color: white;
     }
   }
 
-  .nav-link:hover,
-  .nav-link.active {
-    background-color: rgba(255, 166, 0, 0.616);
+  .head-links {
+    .nav-item {
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background-color: rgba(255, 166, 0, 0.616);
+      }
+    }
   }
 
   .dropdown-toggle:hover,

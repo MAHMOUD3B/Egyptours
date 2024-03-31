@@ -20,7 +20,18 @@ Discover new destinations and enjoy an enjoyable trip.">
   </head>
 
   <body class="text-capitalize">
+    <!-- Start Loading Spinner -->
+    <div
+      class="overlay position-fixed w-100 h-100 bg-white d-flex align-items-center justify-content-center">
+      <div class="loading">
+      </div>
+    </div>
+    <!-- Start Loading Spinner -->
+
+    <!-- ========================= -->
+
     <div class="background position-fixed top-0 w-100"></div>
+
     <!-- The header of page -->
     <header>
       <div class="container">
@@ -32,21 +43,16 @@ Discover new destinations and enjoy an enjoyable trip.">
             data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-between" id="nav">
-            <ul class="navbar-nav p-3 gap-2">
-              <li class="nav-item"><a class="nav-link rounded active" href="#"><i
-                    class="fa fa-home me-2"></i>
-                  home</a>
+          <div class="collapse navbar-collapse justify-content-between p-3" id="nav">
+            <ul class="head-links navbar-nav gap-2 text-dark">
+              <li class="nav-item rounded p-2 active"><i class="fa fa-home me-2"></i>
+                home
               </li>
-              <li class="nav-item"><a class="nav-link rounded " href="#"><i
-                    class="fa fa-suitcase me-2"></i>
-                  tours</a></li>
-              <li class="nav-item"><a class="nav-link rounded" href="#"><i
-                    class="fa fa-plane me-2"></i>flights</a></li>
-              <li class="nav-item"><a class="nav-link rounded" href="#"><i
-                    class="fa fa-hotel me-2"></i>hotels</a></li>
-              <li class="nav-item"><a class="nav-link rounded" href="#"><i
-                    class="fa fa-ship me-2"></i>cruises</a></li>
+              <li class="nav-item rounded p-2"><i class="fa fa-suitcase me-2"></i>
+                tours</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-plane me-2"></i>flights</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-hotel me-2"></i>hotels</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-ship me-2"></i>cruises</li>
             </ul>
             <div class="options d-flex">
               <div class="dropdown me-2">
@@ -75,7 +81,7 @@ Discover new destinations and enjoy an enjoyable trip.">
                   data-bs-toggle="dropdown"><i class="fa fa-language"></i> lang</button>
                 <ul class="dropdown-menu">
                   <li class="dropdown-item"><a
-                      class="link-dark text-decoration-none text-capitalize" href="#">Arabic</a>
+                      class="link-dark text-decoration-none text-capitalize" href="#" id="arabic">Arabic</a>
                   </li>
                   <li class="dropdown-item"><a
                       class="link-dark text-decoration-none text-capitalize" href="#">english</a>
@@ -146,7 +152,7 @@ Discover new destinations and enjoy an enjoyable trip.">
               </div>
               <button
                 class="col-sm-6 col-lg-2 btn btn-warning rounded fs-5 mt-3 ms-lg-3 mx-auto ms-lg-0"
-                type="button">Search Now</button>
+                type="button" id="tours-search">Search Now</button>
             </div>
           </form>
         </div>
@@ -1123,10 +1129,10 @@ Discover new destinations and enjoy an enjoyable trip.">
                           </p>
                           <div class="rating d-flex align-items-center">
                             <img class="rounded-circle img-thumbnail border-dark"
-                              src="./images/team12.jpg" alt="person">
+                              src="./images/hazem walied .jpg" alt="person">
                             <div class="info ms-3">
-                              <p class="fw-bold fs-5 mb-2">John Due</p>
-                              <p class="text-muted mb-2">USA</p>
+                              <p class="fw-bold fs-5 mb-2">hazem walied </p>
+                              <p class="text-muted mb-2">egypt</p>
                               <div class="stars">
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>

@@ -1,3 +1,13 @@
+// loading of page
+let overlay = document.querySelector(".overlay");
+window.onload = function loading() {
+  overlay.style.opacity = "1";
+  setTimeout(() => {
+    overlay.style.opacity = "0";
+    overlay.style.zIndex = "-10";
+  }, 1200);
+};
+
 // increase number function
 document.querySelector(".fa-plus").addEventListener("click", function () {
   document.querySelector(".number").value + 1;
@@ -8,6 +18,14 @@ document.querySelector(".fa-minus").addEventListener("click", function () {
   if (document.querySelector(".number").value > 0) {
     document.querySelector(".number").value - 1;
   }
+});
+
+// handle header links activation
+let links = document.querySelectorAll(".head-links li");
+links.forEach((link) => {
+  link.addEventListener("click", (ele) => {
+    handelActive(ele);
+  });
 });
 
 // add handle active and show classes.
@@ -37,3 +55,9 @@ function handelShow(event) {
   });
   event.classList.add("showed");
 }
+
+// link tour page with others
+let searchBtn = document.querySelector("#tours-search");
+searchBtn.addEventListener("click", () => {
+  location.assign("../tours.html");
+});

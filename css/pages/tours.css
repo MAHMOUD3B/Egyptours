@@ -1,0 +1,77 @@
+/* Stylin header of page */
+header {
+  background-image: none !important;
+}
+
+/* Styling landing section of tours page */
+.tour {
+  min-height: 50vh;
+  background-image: url(/images/bread-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .lay {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .text {
+    transform: translateY(-50%);
+
+    ul {
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 3;
+
+      li {
+        &:nth-child(1) {
+          list-style: none;
+
+          a {
+            transition: .3s;
+
+            &:hover {
+              color: var(--main-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Styling Tours Cards section */
+.cards {
+  .card {
+    transition: .3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .fa-heart {
+      right: 10px;
+      top: 10px;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+    }
+
+    p.badge {
+      top: -10px;
+      left: 10px;
+    }
+
+    .card-body {
+      a.card-title {
+        transition: .3s;
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+}

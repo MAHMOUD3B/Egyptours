@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours Search</title>
+    <!-- Bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <!-- Font awesome file & render elements normally & the main file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Styling main page file -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Styling tours page file -->
+    <link rel="stylesheet" href="./css/pages/tours.css">
+  </head>
+
+  <body>
+    <!-- Start Loading Spinner -->
+    <div
+      class="overlay position-fixed w-100 h-100 bg-white d-flex align-items-center justify-content-center">
+      <div class="loading">
+      </div>
+    </div>
+    <!-- Start Loading Spinner -->
+
+    <!-- ============================== -->
+
+    <!-- The header of page -->
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light text-light">
+          <a class="navbar-brand" href="#">
+            <img class="logo-img" src="./images/logo.png" alt="Egyptours">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between p-3" id="nav">
+            <ul class="head-links navbar-nav gap-2 text-dark">
+              <li class="nav-item rounded p-2 active"><i class="fa fa-home me-2"></i>
+                home
+              </li>
+              <li class="nav-item rounded p-2"><i class="fa fa-suitcase me-2"></i>
+                tours</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-plane me-2"></i>flights</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-hotel me-2"></i>hotels</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-ship me-2"></i>cruises</li>
+            </ul>
+            <div class="options d-flex">
+              <div class="dropdown me-2">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-user"></i> my
+                  accounts</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">login</a></li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">signin</a>
+                  </li>
+                </ul>
+              </div>
+              <select class="form-select w-auto me-2 bg-transparent shadow-none border-0"
+                name="Currency">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="SAR">SAR</option>
+                <option value="EUR">EUR</option>
+              </select>
+              <div class="dropdown">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-language"></i> lang</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">Arabic</a>
+                  </li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">english</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End the header of page -->
+
+    <!-- =============================== -->
+
+    <!-- Start landing of tours section -->
+    <section class="tour position-relative">
+      <div class="lay position-absolute top-0 left-0 w-100 h-100"></div>
+      <div
+        class="text d-flex align-items-center justify-content-between position-absolute w-100 top-50 px-4">
+        <h2 class="text-white fs-1">Tour grid</h2>
+        <ul class="d-flex align-items-center p-2 gap-4 rounded-3 w-auto text-light">
+          <li><a class="link-light text-decoration-none" href="./index.html">Home</a></li>
+          <li>Tour</li>
+          <li>Tour Grid</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Start landing of tours section -->
+
+    <!-- =============================== -->
+
+    <!-- Start grid tours cards -->
+    <section class="tours-cards bg-light py-5">
+      <div class="container">
+        <div class="title">
+          <h2 class="fs-3">2292 Tours found</h2>
+          <p class="text-muted">Book with confidence: No tour booking fees</p>
+        </div>
+        <div class="cards">
+          <div class="row g-3 my-3">
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img1.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">
+                  Bestseller
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img2.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">popular
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 4 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img3.jpg" alt="">
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 my-3">
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img4.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">
+                  featured
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img5.jpg" alt="">
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$520</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 2 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Hotel Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/img6.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">popular
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <a class="card-title fw-bold link-dark text-decoration-none" href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End grid tours cards -->
+
+    <!-- =============================== -->
+
+    <!-- Javascript files -->
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/pages/tours.js"></script>
+  </body>
+
+</html>
