@@ -75,3 +75,63 @@ header {
     }
   }
 }
+
+/* Styling Tours Features section */
+.tours-features {
+  background-image: url("/images/color-bg.png");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+  }
+
+  .feat {
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover .icon {
+      transform: scale(1.1);
+    }
+
+    .icon {
+      transition: .3s;
+
+      &.close {
+        background-color: rgba(0, 123, 255, 0.3);
+        color: rgb(0, 110, 255);
+      }
+
+      &.fa-phone {
+        background-color: rgba(255, 166, 0, 0.3);
+        color: orange;
+      }
+
+      &.fa-money-bill-1 {
+        background-color: rgba(128, 0, 128, 0.3);
+        color: purple;
+      }
+    }
+  }
+}
+
+/* Styling Subscribe section */
+.subscribe {
+  background-image: url("/images/subscribe.jpeg");
+  background-size: cover;
+  background-position: center;
+  .sub {
+    input {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
