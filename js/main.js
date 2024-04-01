@@ -59,5 +59,5 @@ function handelShow(event) {
 // link tour page with others
 let searchBtn = document.querySelector("#tours-search");
 searchBtn.addEventListener("click", () => {
-  location.assign("../tours.html");
+  location.assign("/tours.html");
 });
