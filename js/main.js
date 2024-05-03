@@ -1,24 +1,13 @@
 // loading of page
 let overlay = document.querySelector(".overlay");
-window.onload = function loading() {
+function loading() {
   overlay.style.opacity = "1";
   setTimeout(() => {
     overlay.style.opacity = "0";
     overlay.style.zIndex = "-10";
   }, 1200);
-};
-
-// increase number function
-document.querySelector(".fa-plus").addEventListener("click", function () {
-  document.querySelector(".number").value + 1;
-});
-
-//decrease number function
-document.querySelector(".fa-minus").addEventListener("click", function () {
-  if (document.querySelector(".number").value > 0) {
-    document.querySelector(".number").value - 1;
-  }
-});
+}
+loading();
 
 // handle header links activation
 let links = document.querySelectorAll(".head-links li");
@@ -41,13 +30,11 @@ servicesLinks.forEach((link) => {
     });
   });
 });
-
 function handelActive(event) {
   event.target.parentElement.querySelectorAll(".active").forEach((e) => {
     e.classList.remove("active");
   });
   event.target.classList.add("active");
-  return event.target.classList.contains("active");
 }
 function handelShow(event) {
   event.parentElement.querySelectorAll(".showed").forEach((e) => {
@@ -56,8 +43,44 @@ function handelShow(event) {
   event.classList.add("showed");
 }
 
-// link tour page with others
-let searchBtn = document.querySelector("#tours-search");
-searchBtn.addEventListener("click", () => {
-  location.assign("tours.html");
+// go to tours page
+let searchTourBtn = document.querySelector("#tours-search");
+searchTourBtn.addEventListener("click", () => {
+  location.assign("tours-search.html");
+});
+
+// go to flights page
+let searchFlightBtn = document.querySelector("#flight-search");
+searchFlightBtn.addEventListener("click", () => {
+  location.assign("flights-search.html");
+});
+
+// go to hotels page
+let searchHotelsBtn = document.querySelector("#hotel-search");
+searchHotelsBtn.addEventListener("click", () => {
+  location.assign("hotels-search.html");
+});
+
+// go to cruises page
+let searchCruisesBtn = document.querySelector("#cruise-search");
+searchCruisesBtn.addEventListener("click", () => {
+  location.assign("cruises-search.html");
+});
+
+// owl carousel
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 15,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
 });

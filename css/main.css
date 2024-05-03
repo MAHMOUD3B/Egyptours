@@ -570,12 +570,14 @@ header {
 
 /* Styling Logos section */
 .logos {
+  height: 150px;
   transition: .3s;
   animation: fromBottom linear;
   animation-timeline: view(block 60% 10px);
 
-  .carousel-item {
+  .owl-item {
     img {
+      width: 150px;
       filter: grayscale(1);
       transition: .3s;
 

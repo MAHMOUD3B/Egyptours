@@ -1,0 +1,246 @@
+/* Stylin header of page */
+header {
+  background-image: none !important;
+}
+
+/* Styling landing section of pages */
+.tours,
+.flights,
+.hotels,
+.cruise {
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .lay {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .text {
+    transform: translateY(-50%);
+
+    ul {
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 3;
+
+      li {
+        &:nth-child(1) {
+          list-style: none;
+
+          a {
+            transition: .3s;
+
+            &:hover {
+              color: var(--main-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.tours {
+  background-image: url(../images/bread-bg.jpg);
+}
+.flights {
+  background-image: url(../images/bread-bg5.jpg);
+}
+.hotels {
+  background-image: url(../images/bread-bg6.jpg);
+}
+.cruise {
+  background-image: url(../images/bread-bg3.jpg);
+}
+
+/* Styling Cards Of grid layout */
+.tours-cards-grid,
+.flights-cards-grid,
+.hotels-cards-grid,
+.cruises-cards-grid {
+  .layout-icons {
+
+    .grid,
+    .list {
+      &:hover {
+        color: var(--main-color);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cards {
+    .grid-card {
+      transition: .3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Just Tours page */
+      .fa-heart {
+        right: 10px;
+        top: 10px;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      p.badge {
+        top: -10px;
+        left: 10px;
+      }
+
+      .card-body {
+        a.card-title {
+          transition: .3s;
+
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+
+      /* Just Flights page */
+      .card-img {
+        min-height: 150px;
+      }
+    }
+  }
+}
+
+/* Styling Cards Of list layout */
+.tours-cards-list,
+.flights-cards-list,
+.hotels-cards-list, 
+.cruises-cards-list {
+  .layout-icons {
+
+    .grid,
+    .list {
+      &:hover {
+        color: var(--main-color);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .filter {
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    .list-card {
+      transition: .3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Just Tours page */
+      .card-header {
+        img {
+          width: 300px;
+        }
+
+        .fa-heart {
+          right: 10px;
+          top: 10px;
+          transition: .3s;
+          cursor: pointer;
+
+          &:hover {
+            color: red;
+          }
+        }
+
+        p.badge {
+          top: -10px;
+          left: 10px;
+        }
+      }
+
+      .card-body {
+        a.card-title {
+          transition: .3s;
+
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+
+      /* Just Flights page */
+      .card-img {
+        width: 250px;
+        min-height: 360px;
+      }
+    }
+  }
+}
+
+/* Styling Tours Features section */
+.pages-features {
+  background-image: url("/images/color-bg.png");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+  }
+
+  .feat {
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover .icon {
+      transform: scale(1.1);
+    }
+
+    .icon {
+      transition: .3s;
+
+      &.close {
+        background-color: rgba(0, 123, 255, 0.3);
+        color: rgb(0, 110, 255);
+      }
+
+      &.fa-phone {
+        background-color: rgba(255, 166, 0, 0.3);
+        color: orange;
+      }
+
+      &.fa-money-bill-1 {
+        background-color: rgba(128, 0, 128, 0.3);
+        color: purple;
+      }
+    }
+  }
+}
+
+/* Styling Subscribe section */
+.subscribe {
+  background-image: url("../images/subscribe.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  .sub {
+    input {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

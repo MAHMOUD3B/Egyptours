@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruises Search</title>
+    <!-- Bootstrap files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <!-- Font awesome file & render elements normally & the main file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Styling main page file -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Styling tours page file -->
+    <link rel="stylesheet" href="./css/main-pages.css">
+  </head>
+
+  <body class="text-capitalize">
+    <!-- Start Loading Spinner -->
+    <div
+      class="overlay position-fixed w-100 h-100 bg-white d-flex align-items-center justify-content-center">
+      <div class="loading">
+      </div>
+    </div>
+    <!-- Start Loading Spinner -->
+
+    <!-- ============================== -->
+
+    <!-- The header of page -->
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light text-light">
+          <a class="navbar-brand" href="./index.html">
+            <img class="logo-img" src="./images/logo.png" alt="Egyptours">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between p-3" id="nav">
+            <ul class="head-links navbar-nav gap-2 text-dark">
+              <li class="nav-item rounded p-2 active"><i class="fa fa-home me-2"></i>
+                home
+              </li>
+              <li class="nav-item rounded p-2"><i class="fa fa-suitcase me-2"></i>
+                tours</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-plane me-2"></i>flights</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-hotel me-2"></i>hotels</li>
+              <li class="nav-item rounded p-2"><i class="fa fa-ship me-2"></i>cruises</li>
+            </ul>
+            <div class="options d-flex">
+              <div class="dropdown me-2">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-user"></i> my
+                  accounts</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">login</a></li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">signin</a>
+                  </li>
+                </ul>
+              </div>
+              <select class="form-select w-auto me-2 bg-transparent shadow-none border-0"
+                name="Currency">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="SAR">SAR</option>
+                <option value="EUR">EUR</option>
+              </select>
+              <div class="dropdown">
+                <button
+                  class="accounts shadow-none dropdown-toggle btn btn-outline-light border-0 text-dark rounded text-capitalize"
+                  data-bs-toggle="dropdown"><i class="fa fa-language"></i> lang</button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">Arabic</a>
+                  </li>
+                  <li class="dropdown-item"><a
+                      class="link-dark text-decoration-none text-capitalize" href="#">english</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End the header of page -->
+
+    <!-- =============================== -->
+
+    <!-- Start landing of tours section -->
+    <section class="cruise position-relative">
+      <div class="lay position-absolute top-0 left-0 w-100 h-100"></div>
+      <div class="text position-absolute top-50 px-4 text-end">
+        <ul class="d-flex align-items-center p-2 gap-4 rounded-3 text-light">
+          <li><a class="link-light link-opacity-50 link-opacity-100-hover text-decoration-none"
+              href="./index.html">Home</a></li>
+          <li>Cruises</li>
+          <li id="tour-pgination">Grid</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Start landing of tours section -->
+
+    <!-- =============================== -->
+
+    <!-- Start grid tours cards -->
+    <section class="cruises-cards-grid bg-light py-5" id="layout-grid">
+      <div class="container">
+        <div class="head-title d-flex align-items-center justify-content-between">
+          <div class="title">
+            <h2 class="fs-3">4387 Cruises found</h2>
+            <p class="text-muted">Book with confidence: No cruise booking fees</p>
+          </div>
+          <div class="layout-icons bg-white py-1 px-2 rounded-2 d-flex gap-2">
+            <div class="grid">
+              <i class="fa fa-th-large"></i>
+            </div>
+            <div class="list" id="list">
+              <i class="fa fa-list-ul"></i>
+            </div>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-types">
+
+          </div>
+          <form action="">
+            <select class="form-select shadow-none">
+              <option value="">Sort By Default</option>
+              <option value="">New Tour</option>
+              <option value="">Popular Tour</option>
+              <option value="">Price Low To High</option>
+              <option value="">Price High To Low</option>
+            </select>
+          </form>
+        </div>
+        <div class="cards">
+          <div class="row g-3 my-3">
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img8.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">
+                  Bestseller
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/stenaline.jpg" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">7 Nights
+                    Caribbean Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img6.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">popular
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/royal-caribbean.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">11 Nights Baja
+                    Mexico Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 4 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img9.jpg" alt="">
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/carnival.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">7 Nights
+                    Caribbean Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img8.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">
+                  featured
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/stenaline.jpg" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">7 Nights
+                    Caribbean Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img7.jpg" alt="">
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/msc.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">5 Nights Bermoda
+                    Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$520</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 2 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- cruise Card -->
+            <div class="col-md-6 col-lg-4">
+              <div class="grid-card card position-relative">
+                <img class="card-img-top .img-fluid" src="./images/cruise-img6.jpg" alt="">
+                <p class="sign badge bg-success rounded-pill position-absolute fs-6">popular
+                </p>
+                <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                <div class="card-body">
+                  <img src="./images/royal-caribbean.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">11 Nights Baja
+                    Mexico Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more mx-auto d-block text-center">
+          <a href="#" class="btn btn-warning"><i class="fa fa-sync"></i> Load More</a>
+          <small class="text-muted d-block mt-2">show 1-6 of 2292</small>
+        </div>
+      </div>
+    </section>
+    <!-- End grid tours cards -->
+
+    <!-- =============================== -->
+
+    <!-- Start list tours cards -->
+    <section class="cruises-cards-list bg-light py-5 d-none" id="layout-list">
+      <div class="container">
+        <div class="head-title d-flex align-items-center justify-content-between">
+          <div class="title">
+            <h2 class="fs-3">4387 Cruises found</h2>
+            <p class="text-muted">Book with confidence: No cruise booking fees</p>
+          </div>
+          <div class="layout-icons bg-white py-1 px-2 rounded-2 d-flex gap-2">
+            <div class="grid" id="grid">
+              <i class="fa fa-th-large"></i>
+            </div>
+            <div class="list">
+              <i class="fa fa-list-ul"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 my-3">
+          <div class="col-md-4">
+            <div class="filter bg-white rounded-3 shadow text-muted">
+              <form class="p-3">
+                <h5 class="text-dark">where whould you like to go?</h5>
+                <div class="mb-4 position-relative">
+                  <lablel class="form-label mb-2 d-block" for="place">Destination
+                  </lablel>
+                  <input class="form-control border border-warning ps-sm-5"
+                    placeholder="Destination, city, or rigion" type="text" id="place">
+                  <i
+                    class="fa fa-location-dot position-absolute top-50 mt-2 start-0 ms-3 fs-6 text-muted d-none d-sm-block"></i>
+                </div>
+                <div class="mb-4">
+                  <lablel class="form-label mb-2 d-block" for="from">From</lablel>
+                  <input class="form-control border border-warning" type="text"
+                    onfocus="type='date', min='2024-03-27'" id="from" onblur="type='text'"
+                    placeholder="Pick a date">
+                </div>
+                <div class="mb-4">
+                  <lablel class="form-label mb-2 d-block" for="to">To</lablel>
+                  <input class="form-control border border-warning"
+                    onfocus="type='date', min='2024-03-27'" onblur="type='text'" type="text"
+                    placeholder="Pick a date" id="to">
+                </div>
+                <div class="mb-4">
+                  <label class="mb-2 d-block" for="trip-type">Trip Type</label>
+                  <select class="form-select p-2" name="trip-type" id="trip-type">
+                    <option>City Tour</option>
+                    <option>Village Tour</option>
+                    <option>Holiday Tour</option>
+                    <option>Honeymoon Tour</option>
+                    <option>Family Tour</option>
+                  </select>
+                </div>
+                <button class="btn btn-warning rounded fs-6" type="button" id="tours-search">Search
+                  Now</button>
+                <hr class="my-4">
+                <h5 class="text-dark">filter by price</h5>
+                <label class="fw-bold" for="range">Price: <span
+                    class="badge bg-warning-subtle px-3 py-2 text-dark"><span>10$</span> -
+                    <span>200$</span></span></label>
+                <input class="form-range" type="range" min="0" max="1000" step="10" id="range">
+                <button class="btn btn-outline-warning rounded fs-6" type="button"
+                  id="tours-search">Apply
+                </button>
+                <hr class="my-4">
+                <h5 class="text-dark">Review Score</h5>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="excellent">
+                  <label class="form-label ms-2" for="excellent">excellent</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="good">
+                  <label class="form-label ms-2" for="good">very good</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="average">
+                  <label class="form-label ms-2" for="average">average</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="poor">
+                  <label class="form-label ms-2" for="poor">poor</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="terrible">
+                  <label class="form-label ms-2" for="terrible">terrible</label>
+                </div>
+                <hr class="my-4">
+                <h5 class="text-dark">tour duration</h5>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="all">
+                  <label class="form-label ms-2" for="all">all</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="ten">
+                  <label class="form-label ms-2" for="ten">10 days</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="full">
+                  <label class="form-label ms-2" for="full">full day</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="seven">
+                  <label class="form-label ms-2" for="seven">7 days</label>
+                </div>
+                <div class="from-group d-flex align-items-center">
+                  <input class="form-check" type="checkbox" name="" id="five">
+                  <label class="form-label ms-2" for="five">5 days</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- cruise Cards -->
+          <div class="col-md-8">
+            <div class="cards">
+              <div class="list-card d-flex align-items-center bg-white my-4">
+                <div class="card-header position-relative p-0">
+                  <img class="img-fluid rounded-start-3" src="./images/cruise-img6.jpg" alt="">
+                  <p class="sign badge bg-success rounded-pill position-absolute">
+                    Bestseller
+                  </p>
+                  <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                </div>
+                <div class="card-body p-3">
+                  <img src="./images/royal-caribbean.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">The
+                    Millinnum
+                    Hilton New York</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list-card d-flex align-items-center bg-white my-4">
+                <div class="card-header position-relative p-0">
+                  <img class="img-fluid rounded-start-3" src="./images/cruise-img7.jpg" alt="">
+                  <p class="sign badge bg-success rounded-pill position-absolute">
+                    Bestseller
+                  </p>
+                  <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                </div>
+                <div class="card-body p-3">
+                  <img src="./images/msc.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">5 Nights Bermoda Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list-card d-flex align-items-center bg-white my-4">
+                <div class="card-header position-relative p-0">
+                  <img class="img-fluid rounded-start-3" src="./images/cruise-img8.jpg" alt="">
+                  <p class="sign badge bg-success rounded-pill position-absolute">
+                    Bestseller
+                  </p>
+                  <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                </div>
+                <div class="card-body p-3">
+                  <img src="./images/stenaline.jpg" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">7 Nights Caribbean Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list-card d-flex align-items-center bg-white my-4">
+                <div class="card-header position-relative p-0">
+                  <img class="img-fluid rounded-start-3" src="./images/cruise-img9.jpg" alt="">
+                  <p class="sign badge bg-success rounded-pill position-absolute">
+                    Bestseller
+                  </p>
+                  <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                </div>
+                <div class="card-body p-3">
+                  <img src="./images/carnival.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">7 Nights Caribbean Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list-card d-flex align-items-center bg-white my-4">
+                <div class="card-header position-relative p-0">
+                  <img class="img-fluid rounded-start-3" src="./images/cruise-img6.jpg" alt="">
+                  <p class="sign badge bg-success rounded-pill position-absolute">
+                    Bestseller
+                  </p>
+                  <i class="fa fa-heart rounded-circle p-2 bg-light position-absolute fs-6"></i>
+                </div>
+                <div class="card-body p-3">
+                  <img src="./images/royal-caribbean.png" alt="">
+                  <a class="card-title fw-bold link-dark text-decoration-none d-block mt-2"
+                    href="#">11 Nights Baja Mexico Cruise</a>
+                  <p class="card-text text-muted">124 E Huron St, Chicago</p>
+                  <div class="rates">
+                    <span class="badge bg-warning fs-6">4.4/5 </span>
+                    <span class="text-warning">average</span>
+                    <span class="text-muted">(30 Reviews)</span>
+                  </div>
+                  <div class="footer d-flex align-items-center justify-content-between mt-3">
+                    <p class="text-muted">From<span class="text-dark fw-bold">$600</span>
+                      <b><del>$500</del></b>
+                    </p>
+                    <span class="link-dark text-decoration-none d-block text-muted">
+                      <i class="fa fa-clock"></i> 8 Hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="more mx-auto d-block text-center">
+          <a href="#" class="btn btn-warning"><i class="fa fa-sync"></i> Load More</a>
+          <small class="text-muted d-block mt-2">show 1-6 of 2292</small>
+        </div>
+      </div>
+    </section>
+    <!-- End list tours cards -->
+
+    <!-- =============================== -->
+
+    <!-- Start features section -->
+    <section class="pages-features position-relative py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat position-relative d-flex align-items-start">
+              <i class="icon fa fa-phone p-3 rounded-3 fs-4 me-3"></i>
+              <div class="text">
+                <h5 class="">need help? contact us</h5>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat position-relative d-flex align-items-start">
+              <i class="icon fa fa-money-bill-1 p-3 rounded-3 fs-4 me-3"></i>
+              <div class="text">
+                <h5 class="">payments</h5>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="feat position-relative d-flex align-items-start">
+              <i class="icon close fa fa-close p-3 rounded-3 fs-4 me-3"></i>
+              <div class="text">
+                <h5 class="">cancel policy</h5>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End features section -->
+
+    <!-- =============================== -->
+
+    <!-- Start Subscribe section -->
+    <section class="subscribe py-5 text-white">
+      <div class="container">
+        <div class="content d-flex align-items-center justify-content-between">
+          <h4 class="fs-3 fw-bold">Subscribe to see Secret Deals</h4>
+          <form>
+            <label class="form-label" for="sub">Enter email address</label>
+            <div class="sub form-control">
+              <i class="fa fa-envelope text-muted"></i>
+              <input class="border-0" placeholder="Email address" type="email" id="sub">
+              <input class="btn btn-primary" type="submit" value="Subscribe">
+            </div>
+            <small class="text-white-50"><i class="fa fa-lock"></i> Don't worry your information is
+              safe with us</small>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End Subscribe section -->
+
+    <!-- =============================== -->
+
+    <!-- Start Footer section -->
+    <footer class="pt-5 pb-4 position-relative text-center text-md-start">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="group text-muted">
+              <a class="mb-4 d-block" href="#"><img src="./images/logo.png" alt="logo-img"></a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p>3015 Grand Ave, Coconut Grove,
+                Cerrick Way, FL 12345</p>
+              <p class="mb-2">+123-456-789</p>
+              <a class="mail link-dark text-decoration-none mt-2 d-block"
+                href="mailto: brmjatech6@gmail.com">Egyptour@gmailcom</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="links">
+              <h4 class="mb-4 text-dark">company</h4>
+              <ul class="list-unstyled text-muted">
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">About
+                    Us</a></li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary"
+                    href="#">Services</a>
+                </li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">Jobs</a>
+                </li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">News</a>
+                </li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">Support</a>
+                </li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary"
+                    href="#">Advertising</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="links">
+              <h4 class="mb-4 text-dark">other links</h4>
+              <ul class="list-unstyled m-0 p-0 text-muted">
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="./flights-search.html">EGY
+                    Flights</a></li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="./hotels-search.html">EGY
+                    Hotels</a></li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">Create
+                    Account</a></li>
+                <li class="mb-2"><a class="text-decoration-none link-secondary" href="#">Egyptours
+                    Reviews</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="subscripe">
+              <h4 class="mb-4 text-dark">Subscripe Now</h4>
+              <p>Subscribe for latest updates & <br> promotions</p>
+              <p>Enter Email Address</p>
+              <div class="input-group d-flex">
+                <input class="form-control" type="email" placeholder="Email address">
+                <input class="btn btn-primary input-group-text" type="submit" value="Go">
+              </div>
+              <small><i class="fa fa-lock me-2"></i>Your information is safe with us.</small>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div
+            class="content d-flex align-items-center justify-content-between flex-column flex-md-row">
+            <ul class="links d-flex gap-4">
+              <li class="list-unstyled"><a class="link-dark text-decoration-none" href="#">terms &
+                  conditions</a></li>
+              <li><a class="link-dark text-decoration-none" href="#">Privacy policy</a></li>
+              <li><a class="link-dark text-decoration-none" href="#">Help center</a></li>
+            </ul>
+            <div class="icons d-flex gap-2 align-items-center">
+              <i class="icon fa-brands fa-facebook-f rounded-circle p-3 fs-3"></i>
+              <i class="icon fa-brands fa-youtube rounded-circle p-3 fs-3"></i>
+              <i class="icon fa-brands fa-linkedin-in rounded-circle p-3 fs-3"></i>
+              <i class="icon fa-brands fa-instagram rounded-circle p-3 fs-3"></i>
+              <i class="icon fa-brands fa-twitter rounded-circle p-3 fs-3"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="info d-flex align-items-center justify-content-between fs-6 text-muted flex-column-reverse flex-md-row">
+            <p>&copy; Copyright Egyptours 2024. Made By <span
+                class="fw-bold text-warning">Brmja.Tech</span> Team</p>
+            <div class="payment">
+              <span class="fw-bold">We Accept</span>
+              <img src="./images/payment-img.png" alt="Payment-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer section -->
+
+    <!-- =============================== -->
+
+    <!-- Javascript files -->
+    <script src="./js/bootstrap.bundle.min.js.map"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main-pages.js"></script>
+  </body>
+
+</html>
