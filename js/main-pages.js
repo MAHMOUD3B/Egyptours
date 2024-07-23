@@ -42,3 +42,19 @@ ListBtn.addEventListener("click", () => {
   List.classList.remove("d-none");
   Pagination.innerHTML = "List";
 });
+
+function home() {
+  location.assign("index.html");
+}
+function tours() {
+  location.assign("tours-search.html");
+}
+function flights() {
+  location.assign("flights-search.html");
+}
+function hotels() {
+  location.assign("hotels-search.html");
+}
+function cruises() {
+  location.assign("cruises-search.html");
+}

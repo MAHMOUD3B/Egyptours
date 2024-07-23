@@ -43,29 +43,38 @@ function handelShow(event) {
   event.classList.add("showed");
 }
 
+// go to home
+function home() {
+  location.assign("index.html");
+}
+
 // go to tours page
 let searchTourBtn = document.querySelector("#tours-search");
-searchTourBtn.addEventListener("click", () => {
+searchTourBtn.addEventListener("click", tours);
+function tours() {
   location.assign("tours-search.html");
-});
+}
 
 // go to flights page
 let searchFlightBtn = document.querySelector("#flight-search");
-searchFlightBtn.addEventListener("click", () => {
+searchFlightBtn.addEventListener("click", flights);
+function flights() {
   location.assign("flights-search.html");
-});
+}
 
 // go to hotels page
 let searchHotelsBtn = document.querySelector("#hotel-search");
-searchHotelsBtn.addEventListener("click", () => {
+searchHotelsBtn.addEventListener("click", hotels);
+function hotels() {
   location.assign("hotels-search.html");
-});
+}
 
 // go to cruises page
 let searchCruisesBtn = document.querySelector("#cruise-search");
-searchCruisesBtn.addEventListener("click", () => {
+searchCruisesBtn.addEventListener("click", cruises);
+function cruises() {
   location.assign("cruises-search.html");
-});
+}
 
 // owl carousel
 $(".owl-carousel").owlCarousel({
